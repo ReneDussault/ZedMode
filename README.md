@@ -1,4 +1,4 @@
 # ZedMode
 ### WIP
 firefox dark mode addon
-first implementation, "tranlated" from my chrome addon.
+first implementation, "translated" from my chrome addon.
