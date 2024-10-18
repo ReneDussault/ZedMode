@@ -3,8 +3,8 @@
         "{zedmode@user.js}": {
             "updates": [
                 {
-                    "version": "1.1",
-                    "update_link": "https://github.com/ReneDussault/ZedMode/blob/main/7fbcd171178c48beaf12-1.1.xpi"
+                    "version": "1.1.1",
+                    "update_link": "https://github.com/ReneDussault/ZedMode/blob/main/7fbcd171178c48beaf12-1.1.1.xpi"
                 }
             ]
         }
