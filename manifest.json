@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "ZedMode",
   "version": "1.0",
-  "description": "Enable dark mode for web pages.",
+  "description": "Enable dark mode for tryhackme.com",
   "permissions": [
     "activeTab",
     "storage",
