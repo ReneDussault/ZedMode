@@ -37,7 +37,7 @@
   "background": {
     "scripts": [
       "background.js"
-    ] // No persistent property
+    ]
   },
   "web_accessible_resources": [
     {
@@ -49,5 +49,10 @@
         "<all_urls>"
       ]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "zedmode@user.js"
+    }
+  }
 }
