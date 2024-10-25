@@ -127,7 +127,7 @@ function forceBgColor(enabled) {
 }
 
 
-// Function to force the color of specific bg with a fallback on more stable selectors
+// Function to force the color of specific secondary bg with a fallback on more stable selectors
 function forceSecondBgColor(enabled) {
   const ScndbgElements = document.querySelectorAll(
     '[data-sentry-element="StyledGridWrapper"], ' +
