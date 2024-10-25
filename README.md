@@ -5,7 +5,7 @@ firefox dark mode addon for tryhackme.com
 ## download from mozilla
 https://addons.mozilla.org/en-US/firefox/addon/zedmode/
 
-#OR
+# OR
 
 ## how to use this addon
 download the xpi file, double click to install on firefox
