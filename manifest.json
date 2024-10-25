@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ZedMode",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Enable dark mode for tryhackme.com",
   "permissions": [
     "activeTab",
@@ -54,7 +54,7 @@
   ],
   "browser_specific_settings": {
     "gecko": {
-      "id": "zedmode@user.js"
+      "id": "zedmode@renegade.zed"
     }
   }
 }

@@ -42,6 +42,7 @@ function forceTextColor(enabled) {
     '[data-sentry-component="DeleteAccount"] h2, ' +
     '[role="tab"], ' +
     '[data-sentry-component="StyledPathProgress"] span, ' +
+    '[data-sentry-component="GeneralInformation"] h2, ' +
     '[data-sentry-element="StyledFlexContainer"] h2'
   );
 
