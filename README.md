@@ -1,6 +1,8 @@
 # ZedMode
-### WIP
 Firefox dark mode addon for tryhackme.com
+
+### WIP
+This is a small, in progress, project
 
 # How to use this addon
 
