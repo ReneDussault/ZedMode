@@ -8,4 +8,4 @@ download from mozilla:
 https://addons.mozilla.org/en-US/firefox/addon/zedmode/
 
 # OR
-use the .xpi file in the "realeases" section
+use the .xpi file in the "releases" section
