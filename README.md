@@ -8,6 +8,4 @@ download from mozilla:
 https://addons.mozilla.org/en-US/firefox/addon/zedmode/
 
 # OR
-
-download the xpi file:
-double click to install on firefox https://github.com/ReneDussault/ZedMode/releases/download/v1.2.0/zedmode-1.2.0.xpi
+use the .xpi file in the "realeases" section
