@@ -1,4 +1,4 @@
-// Function to force the color of specific elements with a fallback on more stable selectors
+// force the color of text to white
 function forceTextColor(enabled) {
   const textElements = document.querySelectorAll(
     '[data-sentry-element="StyledQuestionTitle"], ' +
@@ -48,16 +48,16 @@ function forceTextColor(enabled) {
 
   textElements.forEach((element) => {
     if (enabled) {
-      element.style.color = '#FFFFFF'; // Dark mode: Change to white
+      element.style.color = '#FFFFFF';
     } else {
-      element.style.backgroundColor = ''; // Reset to default
-      element.style.color = ''; // Reset to default
+      element.style.backgroundColor = '';
+      element.style.color = '';
     }
   });
 }
 
 
-// Function to force the color of specific bg with a fallback on more stable selectors
+// force the color of specific bg
 function forceBgColor(enabled) {
   const bgElements = document.querySelectorAll(
     '#animation.animation, ' +
@@ -117,17 +117,17 @@ function forceBgColor(enabled) {
 
   bgElements.forEach((bg) => {
     if (enabled) {
-      bg.style.backgroundColor = '#222222'; // Dark mode: Change bg to black
-      bg.style.color = '#FFFFFF'; // Dark mode: Change text to white
+      bg.style.backgroundColor = '#222222';
+      bg.style.color = '#FFFFFF';
     } else {
-      bg.style.backgroundColor = ''; // Reset to default
-      bg.style.color = ''; // Reset to default
+      bg.style.backgroundColor = '';
+      bg.style.color = '';
     }
   });
 }
 
 
-// Function to force the color of specific secondary bg with a fallback on more stable selectors
+// force the color of specific secondary bg
 function forceSecondBgColor(enabled) {
   const ScndbgElements = document.querySelectorAll(
     '[data-sentry-element="StyledGridWrapper"], ' +
@@ -154,17 +154,17 @@ function forceSecondBgColor(enabled) {
 
   ScndbgElements.forEach((bg) => {
     if (enabled) {
-      bg.style.backgroundColor = '#000000'; // Dark mode: Change bg to black
-      bg.style.color = '#FFFFFF'; // Dark mode: Change text to white
+      bg.style.backgroundColor = '#000000';
+      bg.style.color = '#FFFFFF';
     } else {
-      bg.style.backgroundColor = ''; // Reset to default
-      bg.style.color = ''; // Reset to default
+      bg.style.backgroundColor = '';
+      bg.style.color = '';
     }
   });
 }
 
 
-// Function to apply dark mode styles
+// apply dark mode styles
 function toggleDarkMode(enabled) {
   const darkModeStyleId = 'dark-mode-style';
   let darkModeStyleElement = document.getElementById(darkModeStyleId);
@@ -178,11 +178,10 @@ function toggleDarkMode(enabled) {
       element.style.margin = 'unset';
     });
 
-    forceTextColor(true); // Apply dark mode to specified text elements
-    forceBgColor(true); // Apply dark mode to specified background elements
-    forceSecondBgColor(true); // Apply dark mode to specified 2nd background elements
+    forceTextColor(true);
+    forceBgColor(true);
+    forceSecondBgColor(true);
 
-    // Create and insert the dark mode style only if it doesn't exist yet
     if (!darkModeStyleElement) {
       darkModeStyleElement = document.createElement('style');
       darkModeStyleElement.id = darkModeStyleId;
@@ -195,9 +194,9 @@ function toggleDarkMode(enabled) {
       document.head.appendChild(darkModeStyleElement);
     }
   } else {
-    forceTextColor(false); // Reset specified text elements to default
-    forceBgColor(false); // Reset specified background elements to default
-    forceSecondBgColor(false); // Reset specified 2nd background elements
+    forceTextColor(false);
+    forceBgColor(false);
+    forceSecondBgColor(false);
 
     document.querySelectorAll('[data-sentry-element="StyledGeneralHeading"]').forEach((element) => {
       element.style.margin = '';
@@ -207,7 +206,6 @@ function toggleDarkMode(enabled) {
       element.style.margin = '';
     });
 
-    // Remove the dark mode style element if it exists
     if (darkModeStyleElement) {
       darkModeStyleElement.remove();
     }
@@ -215,26 +213,23 @@ function toggleDarkMode(enabled) {
 }
 
 
-// Check the current state of dark mode from storage and apply it
+// check the current state of dark mode from storage and apply it
 browser.storage.local.get("darkModeEnabled").then((result) => {
-  const darkModeEnabled = result.darkModeEnabled || false; // Default to false if not set
-  toggleDarkMode(darkModeEnabled); // Apply the state
+  const darkModeEnabled = result.darkModeEnabled || false;
+  toggleDarkMode(darkModeEnabled);
 });
 
-// Listen for the message from the background script
 browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  toggleDarkMode(request.enabled); // Apply or remove dark mode based on the toggle state
+  toggleDarkMode(request.enabled);
 });
 
-// Observer to monitor DOM changes and reapply styles if necessary
 const observer = new MutationObserver(() => {
   const darkModeStyleElement = document.getElementById('dark-mode-style');
   if (darkModeStyleElement) {
-    toggleDarkMode(true);  // Reapply dark mode styles if DOM changes
+    toggleDarkMode(true);
   } else {
-    toggleDarkMode(false); // Ensure reset if dark mode is disabled
+    toggleDarkMode(false);
   }
 });
 
-// Start observing the body for changes, including newly added elements
 observer.observe(document.body, { childList: true, subtree: true });
