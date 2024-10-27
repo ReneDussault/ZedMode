@@ -1,6 +1,6 @@
 # ZedMode
-ZedMode is a custom Firefox add-on that enhances your experience on TryHackMe by enabling a sleek dark theme. 
-Whether you're working on cybersecurity labs late into the night or just prefer a darker interface, 
+ZedMode is a custom Firefox add-on that enhances your experience on TryHackMe by enabling a sleek dark theme.  
+Whether you're working on cybersecurity labs late into the night or just prefer a darker interface,  
 ZedMode automatically transforms the bright colors of TryHackMe into a visually comfortable dark mode, helping reduce eye strain.
 
 Key Features:
