@@ -1,13 +1,13 @@
 # UPDATE
-TryHackMe has finally released a native dark mode for their website! 
-As a result, this add-on will no longer be actively developed. 
+TryHackMe has finally released a native dark mode for their website!  
+As a result, this add-on will no longer be actively developed.  
 It will remain available on Mozilla's store for a while for those who enjoy using it. 
 
-However, I plan to unlist it in the near future. 
-Probably somewhere in 2025. 
+However, I plan to unlist it in the near future.  
+Probably somewhere in 2025.  
 The source code will still be available on this GitHub page for anyone interested. 
 
-Thank you to everyone who tried ZedMode! 
+Thank you to everyone who tried ZedMode!  
 This project has been a great learning experience, especially in JavaScript, CSS, and automation. 
 
 
